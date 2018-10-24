@@ -1,0 +1,60 @@
+header, footer{
+   background-color: darkcyan;
+}
+
+h1{
+    color: white;
+}
+
+body{
+    background-color:beige;
+    font-family: "Arial", Arial, sans-serif;
+    margin: 0px;
+}
+
+.question{
+    border-top: 1px solid red;
+    border-right: 2px double green;
+    border-bottom: 1px dashed blue;
+    border-left: 5px groove orange;
+}
+
+.answer{
+    font-family: "Courier New";
+}
+
+header{
+    font-family: Impact;
+    padding: 5px;
+}
+
+main{
+    font-size: 1.2em;
+    text-align: center;
+    position: relative;
+}
+
+footer{
+    margin-top: 20px;
+    text-align: right;
+    padding: 5px;
+
+}
+
+footer small{
+    font-size: 11px;
+    color: white;
+}
+
+#hint{
+    background-color: yellow;
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    border: 2px dotted red;
+}
+
+#hint p{
+    margin: 10px;
+    padding: 10px 15px;
+}

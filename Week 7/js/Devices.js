@@ -73,24 +73,44 @@ var ALL_DEVICES = [
 
 //My code
 var listElements = document.getElementsByClassName("list");
+var brandOptionList = document.getElementById("brandOption");
+var deviceOptionList = document.getElementById("deviceOption");
 
-for (var element of listElements){
+for (let element of listElements){
     element.style.border="2px solid blue";
     element.style.fontSize = "20px";
 }
 
-var brandOptionList = document.getElementById("brandOption");
-var deviceOptionList = document.getElementById("deviceOption");
+//Filling the brand list.
 for(let i = 0 ; i<ALL_BRANDS.length; i++){
     var newBrandOption =  document.createElement("option");
     newBrandOption.text = ALL_BRANDS[i];
-    newBrandOption.value = ALL_BRANDS[i].value;
+    newBrandOption.value = ALL_BRANDS[i];
     brandOptionList.appendChild(newBrandOption);
 }
 
-for(let i = 0; i<ALL_DEVICES.length; i++){
+//Filling the Device list.
+for(let i = 0; i<ALL_DEVICES.length; i++) {
     var newDeviceOption = document.createElement("option");
     newDeviceOption.text = ALL_DEVICES[i].name;
     newDeviceOption.value = ALL_DEVICES[i].name;
     deviceOptionList.appendChild(newDeviceOption);
 }
+
+//Function is called when the brand list is changed (function call is in Devices.html).
+function brandOptionChange() {
+    let selectedBrand = ALL_BRANDS[brandOptionList.selectedIndex];
+    deviceOptionList.innerHTML = "";        //Clears the Device list.
+    for(let i = 0; i<ALL_DEVICES.length; i++){
+        if(selectedBrand === ALL_DEVICES[i].brand){      //Checks if the brand list item is equal to the device brand.
+            newDeviceOption = document.createElement("option");     //if it is then create the device option(model) with the selected brand.
+            newDeviceOption.text = ALL_DEVICES[i].name;
+            newDeviceOption.value = ALL_DEVICES[i].name;
+            deviceOptionList.appendChild(newDeviceOption);
+        }
+    }
+
+}
+
+
+

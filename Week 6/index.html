@@ -13,5 +13,23 @@
         src="js/MyScript.js">
 </script>
 
+//Non - module code
+<script>function sum2() {
+    let num1 = document.getElementsByName('num1')[0].value;
+    let num2 = document.getElementsByName('num2')[0].value;
+    document.getElementsByName('num3')[0].value = Number(num1) + Number(num2);
+
+}</script>
+
+<form>Num 1:
+    <input type="number" name="num1" id="qty">
+    Num 2:
+    <input type="number" name="num2" id="qty2">
+    <br/>
+    Total:
+    <input type="number" name="num3" id="total">
+
+</form>
+<button onclick="sum2()">Calculate</button>
 </body>
 </html>

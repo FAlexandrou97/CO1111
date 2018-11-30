@@ -48,7 +48,7 @@
     var scanner = new Instascan.Scanner(opts);
     Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {
-            scanner.start(cameras[1]);
+            scanner.start(cameras);
         } else {
             console.error('No cameras found.');
             alert("No cameras found.");

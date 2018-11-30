@@ -10,7 +10,6 @@
 <div style="margin: 20px; padding: 20px; background-color: black; color: white; text-align: center;" id="content"></div>
 <button onclick="enableCamera()">QR scanner</button>
 <script>
-    function enableCamera() {
         var opts = {
             // Whether to scan continuously for QR codes. If false, use scanner.scan() to
             // manually scan. If true, the scanner emits the "scan" event when a QR code is
@@ -64,7 +63,6 @@
             console.log(content);
             document.getElementById("content").innerHTML = content;
         });
-    }
 </script>
 </body>
 </html>

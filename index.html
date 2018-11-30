@@ -8,6 +8,7 @@
 <body>
 <video id="preview"></video>
 <div style="margin: 20px; padding: 20px; background-color: black; color: white; text-align: center;" id="content"></div>
+<button onclick="enableCamera()">QR scanner</button>
 <script>
     var opts = {
         // Whether to scan continuously for QR codes. If false, use scanner.scan() to
@@ -44,6 +45,7 @@
         scanPeriod: 1
     };
 
+function enableCamera() {
 
     var scanner = new Instascan.Scanner(opts);
     Instascan.Camera.getCameras().then(function (cameras) {
@@ -62,7 +64,7 @@
         console.log(content);
         document.getElementById("content").innerHTML = content;
     });
-
+}
 </script>
 </body>
 </html>
